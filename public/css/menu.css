@@ -1,0 +1,10 @@
+/* ********* BOOSTREP ****** */
+
+.linha {
+    width: 150px;
+}
+
+.nav-item.active:hover {
+    background-color: rgb(68, 0, 225);
+    -webkit-text-stroke: 0.6px rgb(213, 56, 56);
+}

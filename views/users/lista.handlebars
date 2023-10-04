@@ -1,14 +1,33 @@
-<table border="1">
+
+<link rel="stylesheet" href="/css/menu.css">
+
+
+<br>
+<table class="table" border="1">
+    <thead>
     <tr>
-        <td>ID</td>
-        <td>Nome</td>
+      <th scope="col">ID</th>
+      <th scope="col">Nome</th>
+      <th scope="col">Email</th>
+      <th scope="col" colspan="3"></th>
     </tr>
+  </thead>
+  <tbody>
     {{#each users}}
         <tr>
             <td>{{this.id}}</td>
             <td>{{this.nome}}</td>
+            <td>{{this.email}}</td>
+            <td class="linha">
+              <a href="/users/delete/{{this.id}}" class="btn btn-outline-danger">Excluir</a>
+            </td>
+            <td class="linha">
+              <a href="/users/edit/{{this.id}}" class="btn btn-outline-warning">edit</a>
+            </td>
+            <td class="linha">
+              <a href="/users/view/{{this.id}}" class="btn btn-outline-secondary">Visualizar</a>
+            </td>
         </tr>
     {{/each}}
+  </tbody>
 </table>
-
-

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+</head>
+<body>
+  <h1>Login</h1>
+  <form action="/login/sign_in" method="POST">
+    <label for="email" aria-placeholder="www" >Usuário:</label>
+    <input type="text" id="email" name="email" value="{{email}}" required><br><br>
+    <label for="password">Senha:</label>
+    <input type="password" id="senha" name="senha" value="{{senha}}" required><br><br>
+    <input type="submit" value="Entrar">
+  </form>
+  <br>
+  <br>
+</body>
+</html>

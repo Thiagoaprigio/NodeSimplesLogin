@@ -1,0 +1,46 @@
+<div class="form-container">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Id</label>
+        <input
+          name="titulo"
+          class="form-control"
+          value="{{post.id}}"
+          readonly
+        />
+      </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Titulo</label>
+        <input
+          name="titulo"
+          class="form-control"
+          value="{{post.titulo}}"
+          readonly
+        />
+      </div>
+    </div>
+</div>
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">
+                    Texto
+                </label>
+                <textarea class="form-control" id="textos" name="texto" rows="3"readonly>
+                    {{post.texto}}
+                </textarea>
+            </div>
+        </div>
+    </div>
+</div>
+<label>Usuário</label>
+<input value="{{post.nome}}" readonly/>
+<label>Id usuário</label>
+<input value="{{post.users_id}}" readonly/>

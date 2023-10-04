@@ -1,0 +1,43 @@
+<form action="/posts/update" method="post">
+    <input name="id" type="hidden" value="{{post.id}}"/>
+
+    <div class="row"></div>
+    <div class="row">
+    <div class="col-md-4">
+    <div class="mb-3"></div>
+
+    <label for="exampleFormControlInput1" class="form-label">Titulo</label>
+    <input name="titulo" class="form-control" value="{{post.titulo}}"/>
+   
+    </div>
+    </div>
+
+    <div class="row">
+    <div class="col-md-4">
+    <div class="mb-3">
+    
+    <label for="exampleFormControlTextarea1"         class="form-label">Texto</label>
+    <textarea class="form-control" id="textos" name="texto" rows="3">
+        {{post.texto}}
+    </textarea>
+  </div>
+    <input class="btn btn-primary" type="submit" value="Enviar"/>
+</form>
+
+
+
+ 
+<!--
+        
+        <label>Nome</label>
+    <input name="titulo" value="{{post.titulo}}"/>
+    <textarea name="texto" id="" cols="30" rows="10">{{post.texto}}</textarea>
+    <select name="users_id">
+        {{#each users}}
+            <option value="{{this.id}}" {{#if isSelected}}selected{{/if}}>{{this.nome}}</option>
+        {{/each}}
+    </select>
+    <input type="submit" value="Enviar"/>
+</form>
+
+-->

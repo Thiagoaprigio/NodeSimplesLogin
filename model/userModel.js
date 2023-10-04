@@ -8,12 +8,17 @@ function getUser(id) {
   return db.query('SELECT * FROM users WHERE id = ?', [id]);
 }
 
+function getUserLogin(email, senha) {
+  return db.query('SELECT * FROM users WHERE email = ? AND senha = ? ', [email, senha]);
+}
+
 function save(user) {
-  return db.query('INSERT INTO users (nome) VALUES (?)', [user.nome]);
+  return db.query('INSERT INTO users (nome, email, senha) VALUES (?,?,?)', [user.nome, user.email, user.senha]);
 }
 
 function alterar(user) {
-  return db.query('UPDATE users SET nome = ?  WHERE id = ?', [user.nome, user.id])
+  console.log(user)
+  return db.query('UPDATE users SET nome = ?, email = ?, senha = ?  WHERE id = ?', [user.nome, user.email, user.senha, user.id])
 }
 
 function excluir(user_id) {
@@ -25,7 +30,8 @@ module.exports = {
   getUser,
   save,
   alterar,
-  excluir
+  excluir,
+  getUserLogin
 };
 
 
