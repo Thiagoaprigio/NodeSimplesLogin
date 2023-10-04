@@ -16,7 +16,7 @@ function alterar(post) {
   console.log(post)
   return db.query('UPDATE posts SET titulo = ?, texto = ? WHERE id = ?', [post.titulo, post.texto, post.id])
 }
-
+    
 function excluir(post_id) {
   return db.query('DELETE FROM posts WHERE id = ?', [post_id])
 }
